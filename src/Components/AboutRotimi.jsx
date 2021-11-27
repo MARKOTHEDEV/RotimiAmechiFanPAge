@@ -4,7 +4,7 @@ import ABoutRotimiPics from "../assets/img/rotimi/AboutRotimiAmaechi.jpg"
 const AboutRotimi=()=>{
 
     return (
-        <section class="about-area">
+        <section class="about-area" id="aboutROtimi">
                 <div class="container">
                 <div class="row align-items-center">
                 <div class="col-xxl-7 col-xl-7 col-lg-6 col-md-8">
@@ -18,9 +18,10 @@ const AboutRotimi=()=>{
 
                 <div class="section-tittle mb-25">
                 <h2>Meet <span>Rotimi <br/>Amaechi</span></h2>
-                <p>Dolor sit amet, consectetur adipisicing elit. Commodi, vel omnis repellendus mollitia, explicabo, maiores quisquam numquam quia reiciendis sit, accusantium atque ex animi perspiciatis ab odit earum assumenda aliquid santium atque ex animi.</p>
-                <p>Dolor sit amet, consectetur adipisicing elit. Commodi, vel omnis repellendus mollitia, explicabo, maiores quisquam numquam quia reiciendis sit, accusantium atque ex animi perspiciatis ab odit earum assumenda aliquid santium atque ex animi.</p>
-                </div>
+               <p>
+               During the transition to the Third Nigerian Republic, Amaechi was Secretary of the National Republican Convention in Ikwerre Local Government Area of Rivers State. Between 1992 and 1994, he was Special Assistant to the Deputy Governor of Rivers State, Peter Odili – his boss believed in Amaechi as a young man with potential in politics, and brought him under his wing. In 1996, he was the Rivers State's Secretary of the Democratic Party of Nigeria (DPN) caretaker committee during the transition programme of General Sani Abacha
+               </p>
+           </div>
                 </div>
                 </div>
                 </div>

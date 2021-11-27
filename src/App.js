@@ -22,7 +22,7 @@ const  App=()=>{
         <Goals/>
 
         <Cards />
-        <Cards />
+        {/* <Cards /> */}
         <Footer/>
         <JoinForm 
         ShowRegisterForm={ShowRegisterForm}

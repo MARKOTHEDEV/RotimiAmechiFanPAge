@@ -33,10 +33,10 @@ const Nav=(props)=>{
             <nav className={`markoNav ${ham?"showNav":""}`}>
                 
             <ul id="navigation" style={{"position":"relative"}}>
-            <li><a href="index-2.html">About Us</a></li>
-            <li><a href="speakers.html">Meet Rotimi Amechi</a></li>
+            <li><a href="#aboutus">About Us</a></li>
+            <li><a href="#aboutROtimi">Meet Rotimi Amechi</a></li>
             {/* <li><a href="schedule.html">Schedule</a></li> */}
-            <li><a href="location.html">Goal</a></li>
+            <li><a href="#goal">Goal</a></li>
             {/* <li><a href="blog.html">Blog</a>
             <ul className="submenu">
             <li><a href="blog.html">Blog</a></li>

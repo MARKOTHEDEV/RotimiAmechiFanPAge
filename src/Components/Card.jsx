@@ -1,4 +1,4 @@
-import pic from "../assets/img/gallery/blog1.jpg"
+import pic from "../assets/img/rotimi/Rotimi-AmaechiWIthCap.jpg"
 
 
 const Card =()=>{
@@ -11,8 +11,8 @@ const Card =()=>{
                 <a href="#"><img src={pic} alt="" /></a>
                 </div>
                 <div className="blogs-cap">
-                <h5><a href="#">WHEN CORNERS COLLIDE: DECODING THE CONTRASTING AESTHETICS</a></h5>
-                <p>- Justin Case</p>
+                <h5><a href="#">Ex-gov candidate backs Arewa youths, asks Amaechi to run for presidency</a></h5>
+                <p>A former governorship candidate in Rivers State, Tonye Princewill, has said the Minister of Transportation, Rotimi Amaechi has the requisite qualities to become the President in ...</p>
                 </div>
                 </div>
         </div>

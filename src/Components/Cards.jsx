@@ -9,7 +9,7 @@ const Cards=()=>{
 
 <section className="home-blog bottom-padding">
 <div className="container">
-    <h2>News</h2>
+    <h2 style={{"color":"whitesmoke"}}>News</h2>
 <div className="row">
 
         <Card />

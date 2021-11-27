@@ -5,7 +5,7 @@ const Goals=()=>{
 
     return (
 
-        <section class="shedule-area section-padding">
+        <section class="shedule-area section-padding" id="goal">
 <div class="container">
 <div class="row">
 <div class="col-xl-5 col-lg-6 col-md-6">
@@ -43,7 +43,7 @@ href="#nav-one" role="tab" aria-controls="nav-one" aria-selected="true">Our Goal
 <div class="shedule-items">
 <div class="shedule-left">
 <div class="job-tittle">
-<a href="job_details.html"><h4>Removing Hunger From the World</h4></a>
+<a href=""><h4>Give Nigerians Real Benefits Of Real Citizenship</h4></a>
 {/* <p>- Mal Practice</p> */}
 </div>
 </div>
@@ -57,7 +57,7 @@ href="#nav-one" role="tab" aria-controls="nav-one" aria-selected="true">Our Goal
 <div class="shedule-items">
 <div class="shedule-left">
 <div class="job-tittle">
-<a href="job_details.html"><h4>Making More Money is the Goal</h4></a>
+<a href=""><h4>Make Nigeria A Better Place</h4></a>
 {/* <p>- Mal Practice</p> */}
 </div>
 </div>
