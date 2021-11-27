@@ -1,23 +1,33 @@
-import logo from './logo.svg';
+import "./assets/css/bootstrap.css";
+import "./assets/css/followCome.css"
 import './App.css';
+import Nav from "./Components/Nav";
+import HeroSection from "./Components/HeroSection";
+import AboutRotimi from "./Components/AboutRotimi";
+import Aboutus from './Components/Aboutus'
+import Goals from "./Components/Goals"
+import Footer from "./Components/Footer"
+import JoinForm from "./Components/JoinForm";
+import { useState } from "react"
+import Cards from "./Components/Cards";
+const  App=()=>{
 
-function App() {
+  const [ShowRegisterForm,setShowRegisterForm]=useState(false)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App body-bg">
+        <Nav setShowRegisterForm={setShowRegisterForm} />
+        <HeroSection setShowRegisterForm={setShowRegisterForm} />
+        <AboutRotimi />
+        <Aboutus />
+        <Goals/>
+
+        <Cards />
+        <Cards />
+        <Footer/>
+        <JoinForm 
+        ShowRegisterForm={ShowRegisterForm}
+        setShowRegisterForm={setShowRegisterForm} />
+
     </div>
   );
 }
