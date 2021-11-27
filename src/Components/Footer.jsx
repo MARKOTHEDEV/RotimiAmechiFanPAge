@@ -26,7 +26,7 @@ const Footer =()=>{
             </div> */}
 
             <ul class="footer-social">
-            <li><a class="fb" href="https://bit.ly/sai4ull"><i class="fab fa-facebook"></i></a></li>
+            <li><a class="fb" href=""><i class="fab fa-facebook"></i></a></li>
             <li><a class="yt" href="#"><i class="fab fa-youtube"></i></a></li>
             <li><a class="lnk" href="#"><i class="fab fa-linkedin-in"></i></a></li>
             <li><a class="ins" href="#"><i class="fab fa-instagram"></i></a></li>
