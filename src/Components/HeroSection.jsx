@@ -21,7 +21,7 @@ style={{backgroundImage:`url(${RotimiImageHeroEction}) `}}>
 <div className="row">
 <div className="col-xxl-5 col-xl-7 col-lg-6 col-md-8 col-sm-10">
 <div className="hero-caption">
-<h1 ><span>Rotimi</span> Amechi</h1>
+<h1 ><span>Rotimi</span> Amaechi</h1>
 
 <div className="video-icon">
 <a className="popup-video btn-icon" href="">

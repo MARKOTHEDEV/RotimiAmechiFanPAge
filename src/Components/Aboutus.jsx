@@ -11,7 +11,7 @@ const Aboutus=()=> {
 <div class="col-xl-4 col-lg-4 col-md-6">
 
 <div class="section-tittle mb-40">
-<h2>More..</h2>
+<h2>About us</h2>
 {/* <a href="#" class="btn_1 mt-20">Confirm Your Seat<i class="ti-arrow-right"></i></a> */}
 </div>
 </div>
@@ -20,7 +20,13 @@ const Aboutus=()=> {
 <div class="section-tittle mb-40">
 
     <p>
-    In 1999, he contested and won a seat to become a member of the Rivers State House of Assembly to represent his constituency. He was subsequently elected as the Speaker of the House of Assembly. Amaechi was elected the Chairman of Nigeria's Conference of Speakers of State Assemblies. In May 2003, he was re-elected as the Speaker. In 2003, when the National Assembly moved to hijack the legislative functions of the State House of Assembly as enshrined in the constitution, he and his colleagues took the matter to Supreme Court. 
+    The Amechi Support Group as the name implies is a group of well meaning Nigerian across the length and breath of this great country as well all religious and sectors of the economy.
+The sole aim and objective of to mobilize enough support for the emergence of Hon. Rotimi Chibuike Amechi as the President of the Federal Republic of Nigeria. Hence, we are also calling on him to yield to the call of the masses to contest for the office of the President come 2023. 
+    </p>
+
+    <p>
+
+We will not relent untill we get him to declare his listens to our call and take up the challenge towards taking this nation from where it is now to our promise land.
     </p>
 
 </div>
