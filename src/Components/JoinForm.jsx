@@ -1,6 +1,6 @@
 import { useState } from "react"
-
-
+import axios from "axios"
+import Alert from "./Alert"
 const Data=
     {
         "Abia": [
@@ -852,7 +852,7 @@ const Data=
 
 const JoinForm=(props)=>{
   
-    console.log(props.ShowRegisterForm)
+    // console.log(props.ShowRegisterForm)
     const [currentSelectedState,setCurrentSelectedState]=useState('');
     const [CurrentSelectedLocalGovt,setCurrentSelectedLocalGovt]=useState('pick State');
     const [firstName,setFirstName]=useState("");
@@ -861,10 +861,62 @@ const JoinForm=(props)=>{
     const [email,setEmail]=useState("");
     const [Sex,setSex]=useState("");
     const [Age,setAge]=useState("");
-   return (    
+
+
+      const [isLoading,setIsLoading]=useState(false)
+      const [showpopUp,setShowpopUp] =useState(false);
+      const [message,setMessage]=useState('')
+    const handleSubmit =(e)=>{
+      e.preventDefault()
+      let mainUrl ='https://rotimiamechi-backend.herokuapp.com/'
+      let form_data ={
+        "first_name":firstName,
+        "last_name":LastName,
+        "phone_number":PhoneNumber,
+        "email":email,
+        "sex":Sex,
+        "age":Age,
+        "state":currentSelectedState,
+        "local_govt":CurrentSelectedLocalGovt
+
+      }
+      console.log()
+      if(isNaN(parseInt(Age))){
+        setShowpopUp(true)
+        setMessage("Age must be a number")
+        // console.log("dddd")
+        return false
+      }
+      setIsLoading(true)
+      axios.post(mainUrl+'api/join/',form_data)
+      .then((data=>{
+        props.setShowRegisterForm(false)
+        setIsLoading(false)
+        setMessage("Thank you for been a part of the cause")
+        setShowpopUp(true)
+
+        setTimeout(()=>{
+          setShowpopUp(false)
+
+        },2000)
+      }))
+      .catch((error=>{
+      setIsLoading(false)
+        
+      setMessage("Something went wrong please check your connection")
+
+      }))
+      
+    }
+   return (  
+     <>      
+
+     <Alert message={message}  show={showpopUp?"block":"none"}/>
         <div className={`registrationForm__cover ${props.ShowRegisterForm?"showForm":""}`}
         style={{'color':"whitesmoke",overflow:"scroll",}}
         >
+          
+          
         <form  className="registrationForm" style={{'color':"whitesmoke",position:"relative"}} >
        
 
@@ -976,11 +1028,16 @@ const JoinForm=(props)=>{
       </select>
     </div>
   </div>
- 
-  <button type="submit" class="btn btn-primary">Sign in</button>
-{/* </form> */}
+ {
+   isLoading?
+   <button disabled class="btn btn-primary">Processing..</button>
+   :
+   <button type="submit" onClick={(e)=>  handleSubmit(e)} class="btn btn-primary">Sign in</button>
+ }
+
         </form>
         </div>
+    </>
     )
 }
 

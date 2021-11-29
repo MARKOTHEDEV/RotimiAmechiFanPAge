@@ -15,6 +15,8 @@ const  App=()=>{
   const [ShowRegisterForm,setShowRegisterForm]=useState(false)
   return (
     <div className="App body-bg">
+
+
         <Nav setShowRegisterForm={setShowRegisterForm} />
         <HeroSection setShowRegisterForm={setShowRegisterForm} />
         <AboutRotimi />
