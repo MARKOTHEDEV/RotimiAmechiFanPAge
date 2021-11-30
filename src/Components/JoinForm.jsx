@@ -904,7 +904,7 @@ const JoinForm=(props)=>{
         setTimeout(()=>{
           setShowpopUp(false)
 
-        },2000)
+        },4000)
       }))
       .catch((error=>{
       setIsLoading(false)
