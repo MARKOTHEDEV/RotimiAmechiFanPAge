@@ -34,9 +34,9 @@ const Nav=(props)=>{
                 
             <ul id="navigation" style={{"position":"relative"}}>
             <li><a href="#aboutus">About Us</a></li>
-            <li><a href="#aboutROtimi">Meet Rotimi Amechi</a></li>
+            <li><a href="#aboutROtimi">Meet Rotimi Amaechi</a></li>
             {/* <li><a href="schedule.html">Schedule</a></li> */}
-            <li><a href="#goal">Goal</a></li>
+            {/* <li><a href="#goal">Goal</a></li> */}
             {/* <li><a href="blog.html">Blog</a>
             <ul className="submenu">
             <li><a href="blog.html">Blog</a></li>

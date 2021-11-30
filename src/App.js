@@ -10,28 +10,51 @@ import Footer from "./Components/Footer"
 import JoinForm from "./Components/JoinForm";
 import { useState } from "react"
 import Cards from "./Components/Cards";
+import { Route,Switch,Link,useParams} from  "react-router-dom";
+
+
+const HomePage = ()=>{
+
+  const { register } = useParams()
+
+
+  const [ShowRegisterForm,setShowRegisterForm]=useState(register==1?true:false)
+  return(
+    <>
+        <Nav setShowRegisterForm={setShowRegisterForm} />
+              
+       <HeroSection setShowRegisterForm={setShowRegisterForm} />
+       <AboutRotimi />
+       <Aboutus />
+       {/* <Goals/> */}
+
+       <Cards />
+       {/* <Cards /> */}
+       <Footer/>
+       <JoinForm 
+       ShowRegisterForm={ShowRegisterForm}
+       setShowRegisterForm={setShowRegisterForm} />
+    </>
+  )
+}
 const  App=()=>{
 
-  const [ShowRegisterForm,setShowRegisterForm]=useState(false)
   return (
+
+    <>
     <div className="App body-bg">
 
-
-        <Nav setShowRegisterForm={setShowRegisterForm} />
-        <HeroSection setShowRegisterForm={setShowRegisterForm} />
-        <AboutRotimi />
-        <Aboutus />
-        <Goals/>
-
-        <Cards />
-        {/* <Cards /> */}
-        <Footer/>
-        <JoinForm 
-        ShowRegisterForm={ShowRegisterForm}
-        setShowRegisterForm={setShowRegisterForm} />
+    <Route path="/:register?">
+          <HomePage />
+        
+    </Route>
 
     </div>
+    </>
   );
 }
+
+
+
 
 export default App;

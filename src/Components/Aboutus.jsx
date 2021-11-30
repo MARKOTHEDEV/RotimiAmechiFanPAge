@@ -2,6 +2,7 @@
 import React from 'react'
 
 const Aboutus=()=> {
+    
     return (
         
 
@@ -20,13 +21,20 @@ const Aboutus=()=> {
 <div class="section-tittle mb-40">
 
     <p>
-    The Amechi Support Group as the name implies is a group of well meaning Nigerian across the length and breath of this great country as well all religious and sectors of the economy.
-The sole aim and objective of to mobilize enough support for the emergence of Hon. Rotimi Chibuike Amechi as the President of the Federal Republic of Nigeria. Hence, we are also calling on him to yield to the call of the masses to contest for the office of the President come 2023. 
+    The Amechi Support Group as the name implies is a group of well meaning Nigerians across the 
+    length and breath of this great country, as well as all religious and sectors of the economy.
+    {/* ... Federal Republic of Nigeria.*/}
+The sole aim and objective of this organization
+is to mobilize enough support for the emergence of Hon. Rotimi Chibuike Amaechi as the President of the 
+Federal Republic of Nigeria{/* ... Federal Republic of Nigeria.*/}. Hence, we are also calling on him to yield to the call of the masses to contest for the 
+office of the President come 2023. 
     </p>
 
     <p>
 
-We will not relent untill we get him to declare his listens to our call and take up the challenge towards taking this nation from where it is now to our promise land.
+We will not relent untill we get him to declare his 
+intention and listen  to our calls and take up the challenge towards 
+taking this nation from where it is now to our promise land.
     </p>
 
 </div>

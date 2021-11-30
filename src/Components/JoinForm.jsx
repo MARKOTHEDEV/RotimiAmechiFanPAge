@@ -1,6 +1,7 @@
 import { useState } from "react"
 import axios from "axios"
 import Alert from "./Alert"
+import { listOfWards } from "./wards"
 const Data=
     {
         "Abia": [
@@ -847,7 +848,8 @@ const Data=
         "Zurmi"
         ]
     }
-    
+  
+
   
 
 const JoinForm=(props)=>{
@@ -861,6 +863,8 @@ const JoinForm=(props)=>{
     const [email,setEmail]=useState("");
     const [Sex,setSex]=useState("");
     const [Age,setAge]=useState("");
+    const [selectedWard,setSelectedWard]=useState('')
+    const [selectedUnit,setSelectedUnit]=useState('')
 
 
       const [isLoading,setIsLoading]=useState(false)
@@ -877,7 +881,9 @@ const JoinForm=(props)=>{
         "sex":Sex,
         "age":Age,
         "state":currentSelectedState,
-        "local_govt":CurrentSelectedLocalGovt
+        "local_govt":CurrentSelectedLocalGovt,
+        'ward':selectedWard,
+        'unit':selectedUnit
 
       }
       console.log()
@@ -909,8 +915,17 @@ const JoinForm=(props)=>{
       
     }
    return (  
-     <>      
+    // 
+    
+    <>      
+{/* 
 
+fill in 
+
+ward and 
+unit --should be optional
+
+*/}
      <Alert message={message}  show={showpopUp?"block":"none"}/>
         <div className={`registrationForm__cover ${props.ShowRegisterForm?"showForm":""}`}
         style={{'color':"whitesmoke",overflow:"scroll",}}
@@ -933,14 +948,14 @@ const JoinForm=(props)=>{
   <div class="row" >
     <div class="form-group col-md-6">
 
-      <label for="inputEmail4">First Name</label>
+      <label for="inputEmail4">First name</label>
       <input type="text"
       value={firstName}
       onChange={(e)=>setFirstName(e.target.value)}
       class="form-control" id="inputEmail4" placeholder="first name" required />
     </div>
     <div class="form-group col-md-6">
-      <label for="inputPassword4">Last Name</label>
+      <label for="inputPassword4">Last name</label>
       <input type="text"
          value={LastName}
          onChange={(e)=>setLastName(e.target.value)}
@@ -951,14 +966,14 @@ const JoinForm=(props)=>{
 
   <div class="row" >
     <div class="form-group col-md-6">
-      <label for="inputEmail4">PhoneNumber</label>
+      <label for="inputEmail4">Phone number</label>
       <input type="teldhhf"
       value={PhoneNumber}
       onChange={(e)=>setPhoneNumber(e.target.value)}
       class="form-control" id="inputEmail4" placeholder="phone number" required />
     </div>
     <div class="form-group col-md-6">
-      <label for="inputPassword4">email</label>
+      <label for="inputPassword4">Email</label>
       <input type="email"
             value={email}
             onChange={(e)=>setEmail(e.target.value)}
@@ -977,12 +992,12 @@ const JoinForm=(props)=>{
       id="inputState" class="form-control" required>
         {/* <option selected>Choose...</option> */}
         <option value="Male">Male</option>
-        <option value="FeMale">FeMale</option>
+        <option value="FeMale">Female</option>
       </select>
 
     </div>
     <div class="form-group col-md-6">
-      <label for="inputPassword4">age</label>
+      <label for="inputPassword4">Age</label>
       <input 
          value={Age}
          onChange={(e)=>setAge(e.target.value)}
@@ -1026,6 +1041,37 @@ const JoinForm=(props)=>{
         }
         <option value=""></option>
       </select>
+    </div>
+
+
+    <div className="form-group col-md-6">
+    <label for="inputEmail4">Wards</label>
+
+        <input type="text" class="form-control" 
+        value={selectedWard}
+        onChange={(e)=>setSelectedWard(e.target.value)}
+        list={'list_of_wards'}
+        placeholder={"Double click to get wards"}
+        // required 
+        />
+    <datalist type="text" id="list_of_wards"  >
+            {
+              listOfWards.map(ward=>(
+
+          <option name="" id="" value={ward}>{ward}</option>
+              ))
+            }                                          
+                                                      
+    </datalist>
+    </div>
+
+    <div className="form-group col-md-6">
+    <label for="inputEmail4">Unit</label>
+        <input type="text" name="" id=""
+         class="form-control" 
+        value={selectedUnit}
+        onChange={(e)=>setSelectedUnit(e.target.value)}
+        />
     </div>
   </div>
  {

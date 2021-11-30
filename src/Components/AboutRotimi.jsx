@@ -5,6 +5,7 @@ const AboutRotimi=()=>{
 
     return (
         <section class="about-area" id="aboutROtimi">
+             <br /><br /><br />
                 <div class="container">
                 <div class="row align-items-center">
                 <div class="col-xxl-7 col-xl-7 col-lg-6 col-md-8">
