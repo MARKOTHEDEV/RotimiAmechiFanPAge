@@ -26,10 +26,10 @@ const Footer =()=>{
             </div> */}
 
             <ul class="footer-social">
-            <li><a class="fb" href=""><i class="fab fa-facebook"></i></a></li>
-            <li><a class="yt" href="#"><i class="fab fa-youtube"></i></a></li>
-            <li><a class="lnk" href="#"><i class="fab fa-linkedin-in"></i></a></li>
-            <li><a class="ins" href="#"><i class="fab fa-instagram"></i></a></li>
+            <li><a class="fb" href="https://www.facebook.com/Amaechi-Support-Group-101389089054231"><i class="fab fa-facebook"></i></a></li>
+            <li><a class="yt" target="_blank" href="https://www.youtube.com/channel/UCKlrKBOdzqCgzmkbabBQXyQ"><i class="fab fa-youtube"></i></a></li>
+            {/* <li><a class="lnk" href="#"><i class="fab fa-linkedin-in"></i></a></li>
+            <li><a class="ins" href="#"><i class="fab fa-instagram"></i></a></li> */}
             </ul>
             </div>
             </div>
