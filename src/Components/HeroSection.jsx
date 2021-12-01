@@ -21,9 +21,11 @@ style={{backgroundImage:`url(${RotimiImageHeroEction}) `}}>
 <div className="row" style={{
     // 'border':"1px solid red",
     "position":"relative"}}>
-            <div className="col-xxl-5 col-xl-4 col-lg-6 col-md-8 col-sm-10">
+            <div className="col-xxl-5 col-xl-10 col-lg-6 col-md-8 col-sm-10"
+            // style={{'border':'1px solid red'}}
+            >
             <div className="hero-caption">
-            <h1 ><span>Rotimi</span> Amaechi</h1>
+            <h1 ><span>Amaechi Support </span> Group(ASG) </h1>
 
             <div className="video-icon">
             <a className="popup-video btn-icon" href="">
