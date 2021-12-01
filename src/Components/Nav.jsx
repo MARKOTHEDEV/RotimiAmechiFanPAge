@@ -53,7 +53,8 @@ const Nav=(props)=>{
                 console.log("D")
                 props.setShowRegisterForm(true)
             }}
-            className="header-btn" style={{borderRadius:"10px"}}>Join Now<i className="ti-arrow-right"></i> </a>
+            className="header-btn" style={{borderRadius:"10px"}}>
+            Register now to join (ASG)<i className="ti-arrow-right"></i> </a>
             </div>
             </li>
             </ul>
