@@ -1,7 +1,7 @@
 import { useState } from "react"
 import axios from "axios"
 import Alert from "./Alert"
-import { listOfWards } from "./wards"
+import { listOfWards,ObjectOFLGA_With_wards } from "./wards"
 const Data=
     {
         "Abia": [
@@ -855,8 +855,14 @@ const Data=
 const JoinForm=(props)=>{
   
     // console.log(props.ShowRegisterForm)
+    // from here all data Of Resident
     const [currentSelectedState,setCurrentSelectedState]=useState('');
     const [CurrentSelectedLocalGovt,setCurrentSelectedLocalGovt]=useState('pick State');
+    const [currentSelectedWard,setCurrentSelectedWard] = useState("");
+    //end of  here all data Of Resident
+     
+
+    const [stateOfOrigin,setStateOfOrigin] =useState('');
     const [firstName,setFirstName]=useState("");
     const [LastName,setLastName]=useState("");
     const [PhoneNumber,setPhoneNumber]=useState("");
@@ -870,6 +876,7 @@ const JoinForm=(props)=>{
       const [isLoading,setIsLoading]=useState(false)
       const [showpopUp,setShowpopUp] =useState(false);
       const [message,setMessage]=useState('')
+    // console.log
     const handleSubmit =(e)=>{
       e.preventDefault()
       let mainUrl ='https://rotimiamechi-backend.herokuapp.com/'
@@ -882,15 +889,16 @@ const JoinForm=(props)=>{
         "age":Age,
         "state":currentSelectedState,
         "local_govt":CurrentSelectedLocalGovt,
-        'ward':selectedWard,
-        'unit':selectedUnit
+        'ward':currentSelectedWard,
+        'unit':selectedUnit,
+        'stateOfOrigin':stateOfOrigin
 
       }
-      console.log()
+      console.log(form_data)
       if(isNaN(parseInt(Age))){
         setShowpopUp(true)
         setMessage("Age must be a number")
-        // console.log("dddd")
+        
         return false
       }
       setIsLoading(true)
@@ -904,7 +912,7 @@ const JoinForm=(props)=>{
         setTimeout(()=>{
           setShowpopUp(false)
 
-        },4000)
+        },2000)
       }))
       .catch((error=>{
       setIsLoading(false)
@@ -1009,7 +1017,7 @@ unit --should be optional
 
   <div class="row" >
     <div class="form-group col-md-6">
-      <label for="inputEmail4">State</label>
+      <label for="inputEmail4">State Of Resident</label>
 
       <select id="inputState" class="form-control"
       value={currentSelectedState}
@@ -1025,7 +1033,7 @@ unit --should be optional
     </div>
     <div class="form-group col-md-6">
       {/* <label for="inputPassword4">age</label> */}
-      <label for="inputEmail4">Local Govt</label>
+      <label for="inputEmail4">Local Govt Of Resident</label>
 
       <select id="inputState" class="form-control"
       value={CurrentSelectedLocalGovt}
@@ -1045,34 +1053,65 @@ unit --should be optional
 
 
     <div className="form-group col-md-6">
-    <label for="inputEmail4">Wards</label>
+        <label for="inputEmail4">Wards of Resident</label>
+        <br />
+        <small>double tap the field for info  else enter your ward</small>
+        <input class="form-control"
+        placeholder={"Pick Local Govt First"}
+        value={currentSelectedWard}
+        onChange={(e)=>setCurrentSelectedWard(e.target.value)}
+        list="browsers"
 
-        <input type="text" class="form-control" 
-        value={selectedWard}
-        onChange={(e)=>setSelectedWard(e.target.value)}
-        list={'list_of_wards'}
-        placeholder={"Double click to get wards"}
-        // required 
         />
-    <datalist type="text" id="list_of_wards"  >
-            {
-              listOfWards.map(ward=>(
+          
 
-          <option name="" id="" value={ward}>{ward}</option>
-              ))
-            }                                          
-                                                      
-    </datalist>
+          {/* <input list="browsers" name="browser"> */}
+          <datalist id="browsers">
+          {
+                      ObjectOFLGA_With_wards[CurrentSelectedLocalGovt.toUpperCase()]!=undefined?
+                      ObjectOFLGA_With_wards[CurrentSelectedLocalGovt.toUpperCase()].map(ward=>(
+                        <option value={ward}>{ward}</option>
+                      ))
+                      :
+                      // <option>Pick Local Govt First</option>
+                      ""
+
+                    }
+        </datalist>
+        
+
+        {/* </select> */}
+
+
     </div>
 
     <div className="form-group col-md-6">
-    <label for="inputEmail4">Unit</label>
+    <label for="inputEmail4">Unit of Resident</label>
         <input type="text" name="" id=""
          class="form-control" 
         value={selectedUnit}
         onChange={(e)=>setSelectedUnit(e.target.value)}
         />
     </div>
+
+
+       <div class="form-group col-md-6">
+      <label for="inputEmail4">State Of Origin</label>
+
+      <select id="inputState" class="form-control"
+      value={stateOfOrigin}
+      onChange={(e)=>setStateOfOrigin(e.target.value)}
+      required
+      >
+         {Object.keys(Data).map(stateName=>{
+             return <option value={stateName} selected>{stateName}</option>
+         })}
+                      
+      </select>
+
+    </div>
+
+
   </div>
  {
    isLoading?
@@ -1086,5 +1125,5 @@ unit --should be optional
     </>
     )
 }
-
+// stateOfOrigin
 export default JoinForm

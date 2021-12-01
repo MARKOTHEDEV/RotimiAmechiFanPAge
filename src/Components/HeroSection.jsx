@@ -59,7 +59,7 @@ onClick={(e)=>{
     console.log("D")
     props.setShowRegisterForm(true)
 }}
-className="btn_01" style={{borderRadius:"10px"}}>Join Now!</a>
+className="btn_01" style={{borderRadius:"10px"}}>Register now to join (ASG)</a>
 </div>
 </div>
 </div>
