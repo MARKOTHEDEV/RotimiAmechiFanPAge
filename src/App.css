@@ -83,13 +83,9 @@ display: block !important;
 }
 
 
-@media screen and (min-width:1072px) {
+@media screen and (min-width:902px) {
     .heroSectionMoreInfo{
-        margin: revert;
-        position: absolute;
-        top: 20%;
-        width: 40%;
-        right: 0;
-        font-size: 1.1rem;
+        
+        font-size: 2rem;
     }
 }
