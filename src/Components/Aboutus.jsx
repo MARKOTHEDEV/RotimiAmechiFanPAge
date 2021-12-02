@@ -22,7 +22,8 @@ const Aboutus=()=> {
 
     <p>
     The Amechi Support Group as the name implies is a group of well meaning Nigerians across the 
-    length and breath of this great country, as well as all religious and sectors of the economy.
+    length and breath of this great country, as well as all religious , ethnic ,
+    social cultural and various sectors of the economy.
     {/* ... Federal Republic of Nigeria.*/}
 The sole aim and objective of this organization
 is to mobilize enough support for the emergence of Hon. Rotimi Chibuike Amaechi as the President of the 
