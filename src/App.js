@@ -19,6 +19,7 @@ const HomePage = ()=>{
 
 
   const [ShowRegisterForm,setShowRegisterForm]=useState(register==1?true:false)
+  // const [ShowRegisterForm,setShowRegisterForm]=useState(register==1?true:false)
   return(
     <>
         <Nav setShowRegisterForm={setShowRegisterForm} />
