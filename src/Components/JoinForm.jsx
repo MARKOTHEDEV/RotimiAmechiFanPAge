@@ -894,7 +894,7 @@ const JoinForm=(props)=>{
         'stateOfOrigin':stateOfOrigin
 
       }
-      console.log(form_data)
+      // console.log(form_data)
       if(isNaN(parseInt(Age))){
         setShowpopUp(true)
         setMessage("Age must be a number")
@@ -906,13 +906,10 @@ const JoinForm=(props)=>{
       .then((data=>{
         props.setShowRegisterForm(false)
         setIsLoading(false)
-        setMessage("Thank you for been a part of the cause")
+        setMessage("Thank you for being a part of this cause")
         setShowpopUp(true)
 
-        setTimeout(()=>{
-          setShowpopUp(false)
 
-        },2000)
       }))
       .catch((error=>{
       setIsLoading(false)
@@ -934,7 +931,7 @@ ward and
 unit --should be optional
 
 */}
-     <Alert message={message}  show={showpopUp?"block":"none"}/>
+     <Alert message={message}  show={showpopUp?"flex":"none"}  setShowpopUp={setShowpopUp}  />
         <div className={`registrationForm__cover ${props.ShowRegisterForm?"showForm":""}`}
         style={{'color':"whitesmoke",overflow:"scroll",}}
         >
