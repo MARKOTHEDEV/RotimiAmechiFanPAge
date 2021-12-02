@@ -56,7 +56,7 @@ style={{backgroundImage:`url(${RotimiImageHeroEction}) `}}>
 <a 
 onClick={(e)=>{
     e.preventDefault();
-    console.log("D")
+    // console.log("D")
     props.setShowRegisterForm(true)
 }}
 className="btn_01" style={{borderRadius:"10px"}}>Register now to join (ASG)</a>
