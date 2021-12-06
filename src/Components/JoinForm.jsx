@@ -856,13 +856,13 @@ const JoinForm=(props)=>{
   
     // console.log(props.ShowRegisterForm)
     // from here all data Of Resident
-    const [currentSelectedState,setCurrentSelectedState]=useState('');
+    const [currentSelectedState,setCurrentSelectedState]=useState('Abia');
     const [CurrentSelectedLocalGovt,setCurrentSelectedLocalGovt]=useState('pick State');
     const [currentSelectedWard,setCurrentSelectedWard] = useState("");
     //end of  here all data Of Resident
      
   const [voters_identification_number,setVoters_identification_number]=useState("")
-    const [stateOfOrigin,setStateOfOrigin] =useState('');
+    const [stateOfOrigin,setStateOfOrigin] =useState('Abia');
     const [firstName,setFirstName]=useState("");
     const [LastName,setLastName]=useState("");
     const [PhoneNumber,setPhoneNumber]=useState("");
