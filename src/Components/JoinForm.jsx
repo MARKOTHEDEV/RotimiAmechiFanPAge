@@ -861,13 +861,13 @@ const JoinForm=(props)=>{
     const [currentSelectedWard,setCurrentSelectedWard] = useState("");
     //end of  here all data Of Resident
      
-
+  const [voters_identification_number,setVoters_identification_number]=useState("")
     const [stateOfOrigin,setStateOfOrigin] =useState('');
     const [firstName,setFirstName]=useState("");
     const [LastName,setLastName]=useState("");
     const [PhoneNumber,setPhoneNumber]=useState("");
     const [email,setEmail]=useState("");
-    const [Sex,setSex]=useState("");
+    const [Sex,setSex]=useState("Male");
     const [Age,setAge]=useState("");
     const [selectedWard,setSelectedWard]=useState('')
     const [selectedUnit,setSelectedUnit]=useState('')
@@ -891,7 +891,7 @@ const JoinForm=(props)=>{
         "local_govt":CurrentSelectedLocalGovt,
         'ward':currentSelectedWard,
         'unit':selectedUnit,
-        'stateOfOrigin':stateOfOrigin
+        'stateOfOrigin':stateOfOrigin,'voters_identification_number':voters_identification_number
 
       }
       // console.log(form_data)
@@ -901,6 +901,13 @@ const JoinForm=(props)=>{
         
         return false
       }
+      if(!voters_identification_number.length>0){
+        setShowpopUp(true)
+        setMessage("Voter Identification Number Is Required")
+        
+        return false
+      }
+
       setIsLoading(true)
       axios.post(mainUrl+'api/join/',form_data)
       .then((data=>{
@@ -919,6 +926,11 @@ const JoinForm=(props)=>{
       }))
       
     }
+
+    console.log(
+      voters_identification_number.length>0,"ss"
+    )
+
    return (  
     // 
     
@@ -997,7 +1009,7 @@ unit --should be optional
       id="inputState" class="form-control" required>
         {/* <option selected>Choose...</option> */}
         <option value="Male">Male</option>
-        <option value="FeMale">Female</option>
+        <option value="Female">Female</option>
       </select>
 
     </div>
@@ -1107,7 +1119,14 @@ unit --should be optional
       </select>
 
     </div>
-
+    <div className="form-group col-md-6">
+    <label for="inputEmail4">Voter Identification Number(vin)</label>
+         <input type="text"
+         onChange={(e)=>setVoters_identification_number(e.target.value)}
+          value={voters_identification_number}
+          class="form-control" />
+    </div>
+    {/* setVoters_identification_number */}
 
   </div>
  {
