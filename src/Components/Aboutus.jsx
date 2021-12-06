@@ -21,7 +21,7 @@ const Aboutus=()=> {
 <div class="section-tittle mb-40">
 
     <p>
-    The Amechi Support Group as the name implies is a group of well meaning Nigerians across the 
+    The Amaechi Support Group as the name implies is a group of well meaning Nigerians across the 
     length and breath of this great country, as well as all religious , ethnic ,
     social cultural and various sectors of the economy.
     {/* ... Federal Republic of Nigeria.*/}
